@@ -124,17 +124,18 @@ export default function HomePage() {
                 ordinary players into legendary warriors.
               </p>
               <p>
-                Players obtain <span className="text-primary font-semibold">Titles</span> through gameplay achievements,
-                each granting unique abilities ranked from <span className="text-muted-foreground">C</span>,{" "}
-                <span className="text-secondary">B</span>,<span className="text-primary"> A</span>, to the ultimate{" "}
-                <span className="text-accent font-bold">S-Class</span>.
+                Players choose <span className="text-primary font-semibold">one Title path</span> to master, unlocking
+                new components through gameplay events and achievements.
               </p>
               <p>
-                With a limit of <span className="text-primary font-semibold">3 Titles per player</span>, every choice
-                matters. Unlock passive resistances, devastating active abilities, and reality-warping S-rank domain
-                powers.
+                Each Title consists of three upgradeable components:{" "}
+                <span className="text-secondary font-semibold">Passive</span> (permanent buffs),{" "}
+                <span className="text-primary font-semibold">Active</span> (powerful abilities with cooldowns), and{" "}
+                <span className="text-accent font-semibold">Debuff</span> (strategic risk-reward mechanics).
               </p>
-              <p className="text-primary">Competitive progression. Limited S-rank paths. Epic PvE & PvP battles.</p>
+              <p className="text-primary">
+                Event-driven progression. Strategic ability combinations. Epic PvE & PvP battles.
+              </p>
             </CardContent>
           </Card>
         </div>
@@ -154,8 +155,8 @@ export default function HomePage() {
                 <div className="w-16 h-16 mx-auto bg-primary/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Sparkles className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold text-primary">40+ Title Paths</h3>
-                <p className="text-sm text-muted-foreground">Discover diverse progression paths for every playstyle</p>
+                <h3 className="text-2xl font-bold text-primary">Diverse Titles</h3>
+                <p className="text-sm text-muted-foreground">Master unique Title paths with distinct playstyles</p>
               </CardContent>
             </Card>
 
@@ -164,8 +165,8 @@ export default function HomePage() {
                 <div className="w-16 h-16 mx-auto bg-secondary/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Trophy className="w-8 h-8 text-secondary" />
                 </div>
-                <h3 className="text-2xl font-bold text-secondary">Quest Progression</h3>
-                <p className="text-sm text-muted-foreground">Complete trials to rank up your Titles</p>
+                <h3 className="text-2xl font-bold text-secondary">Event Progression</h3>
+                <p className="text-sm text-muted-foreground">Unlock new components through gameplay events</p>
               </CardContent>
             </Card>
 
@@ -174,8 +175,8 @@ export default function HomePage() {
                 <div className="w-16 h-16 mx-auto bg-accent/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Zap className="w-8 h-8 text-accent" />
                 </div>
-                <h3 className="text-2xl font-bold text-accent">Active Abilities</h3>
-                <p className="text-sm text-muted-foreground">Unleash powerful attacks and domain abilities</p>
+                <h3 className="text-2xl font-bold text-accent">Powerful Components</h3>
+                <p className="text-sm text-muted-foreground">Combine Passive, Active, and Debuff abilities</p>
               </CardContent>
             </Card>
 

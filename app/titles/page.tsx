@@ -3,7 +3,7 @@ import { StarField } from "@/components/star-field"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { CheckCircle2, Sparkles, Flame, Eye, Zap } from "lucide-react"
+import { CheckCircle2, Sparkles, Zap, Clock, Flame } from "lucide-react"
 
 export default function TitlesPage() {
   return (
@@ -18,11 +18,10 @@ export default function TitlesPage() {
             <h1 className="text-5xl md:text-6xl font-bold text-primary glow-text mb-4">Titles System</h1>
             <div className="h-1 w-32 bg-gradient-to-r from-primary via-secondary to-accent mx-auto mb-6" />
             <p className="text-xl text-foreground/80 max-w-2xl mx-auto leading-relaxed">
-              Master the ancient power system and rise through the ranks
+              Master your unique powers and rise in Titles SMP
             </p>
           </div>
 
-          {/* Core Concept */}
           <section className="mb-16">
             <Card className="bg-card/50 backdrop-blur-sm border-border">
               <CardHeader>
@@ -34,239 +33,202 @@ export default function TitlesPage() {
               <CardContent className="space-y-4 text-foreground/90 leading-relaxed">
                 <p className="text-lg">
                   In Titles SMP, strength comes from <span className="text-primary font-semibold">Titles</span> —
-                  powerful abilities earned through gameplay milestones, kills, secrets, and hidden conditions.
+                  powerful abilities given at the start of your journey.
                 </p>
-                <div className="grid md:grid-cols-2 gap-4 pt-4">
+                <div className="grid md:grid-cols-3 gap-4 pt-4">
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-secondary mt-1 flex-shrink-0" />
                     <p>
-                      Maximum <span className="text-primary font-semibold">3 Titles per player</span>
+                      Maximum <span className="text-primary font-semibold">1 Title per player</span>
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-secondary mt-1 flex-shrink-0" />
-                    <p>
-                      Rank system: <span className="text-muted-foreground">C</span> {">"}{" "}
-                      <span className="text-secondary">B</span> {">"} <span className="text-primary">A</span> {">"}{" "}
-                      <span className="text-accent font-bold">S</span>
-                    </p>
+                    <p>Upgrades earned through server events</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-secondary mt-1 flex-shrink-0" />
-                    <p>Earned through achievements and hidden triggers</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-secondary mt-1 flex-shrink-0" />
-                    <p>Strategic choices shape your playstyle</p>
+                    <p>Titles shape your playstyle</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
           </section>
 
-          {/* Rank Types */}
           <section className="mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-8 text-center">Rank Types</h2>
+            <h2 className="text-4xl font-bold text-primary mb-8 text-center">Titles Structure</h2>
+
+            <Card className="bg-card/50 backdrop-blur-sm border-border">
+              <CardContent className="p-6 space-y-6">
+                <p className="text-lg text-foreground/90 leading-relaxed mb-6">
+                  Each Title has three core components that define its power:
+                </p>
+
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="p-4 bg-primary/10 border border-primary/30 rounded">
+                    <h3 className="text-xl font-semibold text-primary mb-2">Passive Ability</h3>
+                    <p className="text-foreground/80">Continuous effect related to the Title</p>
+                  </div>
+
+                  <div className="p-4 bg-secondary/10 border border-secondary/30 rounded">
+                    <h3 className="text-xl font-semibold text-secondary mb-2">Active Ability</h3>
+                    <p className="text-foreground/80">Activated with keybind F</p>
+                  </div>
+
+                  <div className="p-4 bg-accent/10 border border-accent/30 rounded">
+                    <h3 className="text-xl font-semibold text-accent mb-2">Debuff</h3>
+                    <p className="text-foreground/80">Balances the Title by giving a weakness</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+
+          <section className="mb-16">
+            <h2 className="text-4xl font-bold text-primary mb-8 text-center">Active Ability Examples</h2>
 
             <div className="grid md:grid-cols-2 gap-6">
-              {/* C Rank */}
-              <Card className="bg-card/50 backdrop-blur-sm border-muted-foreground/30">
-                <CardHeader>
-                  <CardTitle className="flex items-center justify-between">
-                    <span className="text-2xl text-muted-foreground">C Rank</span>
-                    <Badge variant="secondary" className="text-lg px-3 py-1">
-                      Passive
-                    </Badge>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3 text-foreground/90">
-                  <p className="text-lg font-semibold text-primary">Damage Negation</p>
-                  <p>Negates damage from a specific source completely</p>
-                  <p className="text-sm text-muted-foreground">
-                    Example: C-Rank Blaze Title makes you immune to fire damage from Blazes
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* B Rank */}
-              <Card className="bg-card/50 backdrop-blur-sm border-secondary/30">
-                <CardHeader>
-                  <CardTitle className="flex items-center justify-between">
-                    <span className="text-2xl text-secondary">B Rank</span>
-                    <Badge className="text-lg px-3 py-1 bg-secondary text-secondary-foreground">Passive</Badge>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3 text-foreground/90">
-                  <p className="text-lg font-semibold text-primary">Damage Increase</p>
-                  <p>Increases damage dealt to that specific source</p>
-                  <p className="text-sm text-muted-foreground">
-                    Example: B-Rank Blaze Title deals bonus damage to all Blazes
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* A Rank */}
+              {/* Chronos Title */}
               <Card className="bg-card/50 backdrop-blur-sm border-primary/50">
                 <CardHeader>
-                  <CardTitle className="flex items-center justify-between">
-                    <span className="text-2xl text-primary">A Rank</span>
-                    <Badge className="text-lg px-3 py-1 bg-primary text-primary-foreground">Active</Badge>
+                  <CardTitle className="flex items-center gap-2 text-2xl text-primary">
+                    <Clock className="w-7 h-7" />
+                    Chronos Title
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-3 text-foreground/90">
-                  <p className="text-lg font-semibold text-primary">Active Ability Unlocked</p>
-                  <p>Unleash a powerful attack with a 30-second cooldown</p>
-                  <div className="pt-2">
+                <CardContent className="space-y-4">
+                  <div>
+                    <Badge className="mb-3 bg-primary text-primary-foreground">Time Freeze</Badge>
+                    <p className="text-foreground/90 mb-4">
+                      Freeze time around you, stopping all entities and projectiles in their tracks
+                    </p>
+                  </div>
+                  <div>
                     <img
-                      src="/minecraft-player-using-fire-wave-attack-ability.jpg"
-                      alt="A-Rank ability example"
+                      src="/images/2025-12-03-03.jpeg"
+                      alt="Chronos Time Freeze ability example"
                       className="w-full rounded border border-primary/30"
                     />
-                    <p className="text-xs text-muted-foreground mt-2">Example: Fire wave attack ability</p>
                   </div>
                 </CardContent>
               </Card>
 
-              {/* S Rank */}
-              <Card className="bg-card/50 backdrop-blur-sm border-accent/50 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent" />
-                <CardHeader className="relative">
-                  <CardTitle className="flex items-center justify-between">
-                    <span className="text-2xl text-accent font-bold glow-text">S Rank</span>
-                    <Badge className="text-lg px-3 py-1 bg-accent text-accent-foreground">Domain</Badge>
+              {/* Nova Title */}
+              <Card className="bg-card/50 backdrop-blur-sm border-accent/50">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2 text-2xl text-accent">
+                    <Flame className="w-7 h-7" />
+                    Nova Title
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-3 text-foreground/90 relative">
-                  <p className="text-lg font-semibold text-primary">Static Domain Ability</p>
-                  <p>Create a reality-warping zone that lasts ~45 seconds</p>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-start gap-2">
-                      <Zap className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                      <span>2-minute cooldown</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Flame className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                      <span>Passive tick damage to enemies within</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Eye className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                      <span>Minimal knockback effect</span>
-                    </li>
-                  </ul>
-                  <div className="pt-2">
+                <CardContent className="space-y-4">
+                  <div>
+                    <Badge className="mb-3 bg-accent text-accent-foreground">Super Nova</Badge>
+                    <p className="text-foreground/90 mb-4">
+                      Unleash a devastating explosion of cosmic energy that damages all nearby enemies
+                    </p>
+                  </div>
+                  <div>
                     <img
-                      src="/minecraft-domain-expansion-purple-energy-field.jpg"
-                      alt="S-Rank domain ability example"
-                      className="w-full rounded border border-accent/50"
+                      src="/images/2025-12-03-03.png"
+                      alt="Nova Super Nova ability example"
+                      className="w-full rounded border border-accent/30"
                     />
-                    <p className="text-xs text-muted-foreground mt-2">Example: Domain expansion ability</p>
                   </div>
                 </CardContent>
               </Card>
             </div>
           </section>
 
-          {/* Title Paths */}
           <section className="mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-8 text-center">Title Paths</h2>
+            <h2 className="text-4xl font-bold text-primary mb-8 text-center">Upgrade System</h2>
 
             <Card className="bg-card/50 backdrop-blur-sm border-border">
               <CardContent className="p-6 space-y-6">
                 <p className="text-lg text-foreground/90 leading-relaxed">
-                  Over <span className="text-primary font-semibold">40+ unique Title paths</span> are available, each
-                  with its own progression system and abilities.
+                  Strengthen your Title by participating in server events and earning upgrades.
+                </p>
+
+                <div className="space-y-4">
+                  <div className="flex items-start gap-4">
+                    <Zap className="w-6 h-6 text-secondary mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-primary mb-1">Event Participation</p>
+                      <p className="text-foreground/80">Upgrades are earned by participating in server events</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <Zap className="w-6 h-6 text-accent mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-primary mb-1">Damage Boost</p>
+                      <p className="text-foreground/80">Each upgrade boosts damage output by 10%</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <Zap className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-primary mb-1">Chance-Based</p>
+                      <p className="text-foreground/80">Upgrades are not guaranteed - test your luck!</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+
+          <section className="mb-16">
+            <h2 className="text-4xl font-bold text-primary mb-8 text-center">Title Examples</h2>
+
+            <Card className="bg-card/50 backdrop-blur-sm border-border">
+              <CardContent className="p-6 space-y-6">
+                <p className="text-lg text-foreground/90 leading-relaxed">
+                  Over <span className="text-primary font-semibold">40 unique Titles</span>, each with its own
+                  abilities.
                 </p>
 
                 <div className="space-y-4">
                   <div className="border-l-4 border-primary pl-4 py-2">
-                    <p className="font-semibold text-primary">Blaze Path</p>
-                    <p className="text-sm text-muted-foreground">
-                      100 Blaze kills → C-Rank Blaze Title + quest path unlocked
-                    </p>
-                  </div>
-
-                  <div className="border-l-4 border-secondary pl-4 py-2">
-                    <p className="font-semibold text-secondary">Enderman Path</p>
-                    <p className="text-sm text-muted-foreground">
-                      100 Enderman kills → C-Rank Enderman Title + quest path unlocked
-                    </p>
+                    <p className="font-semibold text-primary mb-1">Chronos</p>
+                    <p className="text-sm text-muted-foreground">Start with Chronos Title</p>
                   </div>
 
                   <div className="border-l-4 border-accent pl-4 py-2">
-                    <p className="font-semibold text-accent">40+ More Paths</p>
-                    <p className="text-sm text-muted-foreground">Discover hidden conditions and secret triggers</p>
+                    <p className="font-semibold text-accent mb-1">Nova</p>
+                    <p className="text-sm text-muted-foreground">Start with Nova Title</p>
+                  </div>
+
+                  <div className="border-l-4 border-secondary pl-4 py-2">
+                    <p className="font-semibold text-secondary mb-1">And Many More...</p>
+                    <p className="text-sm text-muted-foreground">38+ additional unique Title paths to discover</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
           </section>
 
-          {/* Quest Promotion */}
-          <section className="mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-8 text-center">Quest Promotion System</h2>
-
-            <Card className="bg-card/50 backdrop-blur-sm border-border">
-              <CardContent className="p-6 space-y-6">
-                <p className="text-lg text-foreground/90 leading-relaxed">
-                  Rank up your Titles by completing challenging quests assigned by The System.
-                </p>
-
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-muted-foreground/20 text-muted-foreground px-3 py-1 rounded font-bold">
-                      C → B
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-foreground/90">Complete System-assigned quest to upgrade to B-Rank</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="bg-secondary/20 text-secondary px-3 py-1 rounded font-bold">B → A</div>
-                    <div className="flex-1">
-                      <p className="text-foreground/90">Complete advanced quest to unlock active abilities</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="bg-primary/20 text-primary px-3 py-1 rounded font-bold">A → S</div>
-                    <div className="flex-1">
-                      <p className="text-foreground/90">Complete elite quest to unlock domain abilities</p>
-                    </div>
-                  </div>
-
-                  <div className="mt-6 p-4 bg-accent/10 border border-accent/30 rounded">
-                    <p className="text-accent font-semibold mb-2">⚠️ Important Note</p>
-                    <p className="text-sm text-foreground/90 leading-relaxed">
-                      Once you reach <span className="text-accent font-bold">S-Rank</span> in a path, all other Title
-                      paths are <span className="font-semibold">permanently locked</span> at their current level unless
-                      you void your Title or get death-banned.
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </section>
-
-          {/* Ability Activation */}
           <section className="mb-16">
             <h2 className="text-4xl font-bold text-primary mb-8 text-center">Ability Activation</h2>
 
             <Card className="bg-card/50 backdrop-blur-sm border-border">
               <CardContent className="p-6 space-y-4">
-                <p className="text-lg text-foreground/90 leading-relaxed">
-                  Activate your Title abilities using a simple control system.
-                </p>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="p-4 bg-primary/10 border border-primary/30 rounded text-center">
+                    <p className="text-sm text-muted-foreground mb-2">Active Ability</p>
+                    <div className="bg-primary/20 px-4 py-3 rounded font-mono text-primary font-bold text-lg">F</div>
+                  </div>
 
-                <div className="flex items-center gap-4 p-4 bg-primary/10 border border-primary/30 rounded">
-                  <div className="bg-primary/20 px-4 py-2 rounded font-mono text-primary">Right/Left Click</div>
-                  <span className="text-foreground/90">+</span>
-                  <div className="bg-muted/50 px-4 py-2 rounded font-semibold">Stick</div>
+                  <div className="p-4 bg-secondary/10 border border-secondary/30 rounded text-center">
+                    <p className="text-sm text-muted-foreground mb-2">Passive Ability</p>
+                    <div className="px-4 py-3 rounded text-secondary font-semibold text-lg">Always Active</div>
+                  </div>
+
+                  <div className="p-4 bg-accent/10 border border-accent/30 rounded text-center">
+                    <p className="text-sm text-muted-foreground mb-2">Debuff</p>
+                    <div className="px-4 py-3 rounded text-accent font-semibold text-lg">Auto-Applied</div>
+                  </div>
                 </div>
-
-                <p className="text-sm text-muted-foreground italic">
-                  Note: May change to a custom item in future updates
-                </p>
               </CardContent>
             </Card>
           </section>

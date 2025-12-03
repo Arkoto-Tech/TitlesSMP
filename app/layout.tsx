@@ -13,23 +13,23 @@ export const metadata: Metadata = {
   title: "Titles SMP - Awaken Power, Shape Fate",
   description:
     "Join Titles SMP, a Minecraft SMP with a custom power system. Earn Titles, unlock abilities, and rise through the ranks from C to S-Class.",
-  generator: "titlessmp.technium.cc",
+  generator: "v0.app",
   icons: {
     icon: [
       {
-        url: "/icon.png",
+        url: "/icon-light-32x32.png",
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/icon.png",
+        url: "/icon-dark-32x32.png",
         media: "(prefers-color-scheme: dark)",
       },
       {
-        url: "/favicon.ico",
+        url: "/icon.svg",
         type: "image/svg+xml",
       },
     ],
-    apple: "/apple-touch-icon.png",
+    apple: "/apple-icon.png",
   },
 }
 
